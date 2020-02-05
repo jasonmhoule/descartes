@@ -18,7 +18,7 @@ RUN install2.r --error \
 ## install Github packages
     && installGithub.r MarkEdmondson1234/youtubeAnalyticsR \
                        MarkEdmondson1234/googleID \
-                       cloudyr/googleCloudStorageR \
+                       jasonmhoule/googleCloudStorageR \
                        cloudyr/googleComputeEngineR \
 ## clean up
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
