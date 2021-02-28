@@ -26,18 +26,18 @@ def GenerateConfig(context):
     vm-selenium-template.GenerateConfig(context).resources
   }]
 
-  resources = [{
-      'name': 'vm-main',
-      'type': 'vm-main-template.py'
-  }, {
-      'name': 'vm-selenium',
-      'type': 'vm-selenium-template.py'
+  # resources = [{
+  #     'name': 'vm-main',
+  #     'type': 'vm-main-template.py'
   # }, {
-  #     'name': 'network-1',
-  #     'type': 'network-template.py'
-  # }, {
-  #     'name': 'firewall-1',
-  #     'type': 'firewall-template.py'
-  }]
+  #     'name': 'vm-selenium',
+  #     'type': 'vm-selenium-template.py'
+  # # }, {
+  # #     'name': 'network-1',
+  # #     'type': 'network-template.py'
+  # # }, {
+  # #     'name': 'firewall-1',
+  # #     'type': 'firewall-template.py'
+  # }]
   
   return {'resources': resources2}
