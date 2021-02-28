@@ -14,7 +14,7 @@
 
 """Creates a Container VM with the provided Container manifest."""
 
-import rstudiocontainer
+import seleniumcontainer
 import common
 
 def GenerateConfig(context):

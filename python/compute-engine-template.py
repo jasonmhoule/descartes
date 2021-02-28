@@ -14,15 +14,15 @@
 
 """Creates the Compute Engine."""
 
-import vm-main-template
-import vm-selenium-template
+import mainvm
+import seleniumvm
 
 def GenerateConfig(context):
   """Creates the Compute Engine with network and firewall."""
   
   resources2 = [
-    vm-main-template.GenerateConfig(context)['resources'],
-    vm-selenium-template.GenerateConfig(context)['resources']
+    mainvm.GenerateConfig(context)['resources'],
+    seleniumvm.GenerateConfig(context)['resources']
     ]
 
   # resources = [{
