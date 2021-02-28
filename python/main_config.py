@@ -14,29 +14,29 @@
 
 """Creates the Compute Engine."""
 
-import mainvm
-import seleniumvm
+# import main_vm
+# import selenium_vm
 
 def GenerateConfig(context):
   """Creates the Compute Engine with network and firewall."""
   
-  resources2 = [
-    mainvm.GenerateConfig(context)['resources'],
-    seleniumvm.GenerateConfig(context)['resources']
-    ]
+  # resources2 = [
+  #   main_vm.GenerateConfig(context)['resources'],
+  #   selenium_vm.GenerateConfig(context)['resources']
+  #   ]
 
-  # resources = [{
-  #     'name': 'vm-main',
-  #     'type': 'vm-main-template.py'
+  resources = [{
+      'name': 'vm-main',
+      'type': 'main_vm.py'
+  }, {
+      'name': 'vm-selenium',
+      'type': 'selenium_vm.py'
   # }, {
-  #     'name': 'vm-selenium',
-  #     'type': 'vm-selenium-template.py'
-  # # }, {
-  # #     'name': 'network-1',
-  # #     'type': 'network-template.py'
-  # # }, {
-  # #     'name': 'firewall-1',
-  # #     'type': 'firewall-template.py'
-  # }]
+  #     'name': 'network-1',
+  #     'type': 'network-template.py'
+  # }, {
+  #     'name': 'firewall-1',
+  #     'type': 'firewall-template.py'
+  }]
   
-  return {'resources': resources2}
+  return {'resources': resources}
