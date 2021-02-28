@@ -14,8 +14,17 @@
 
 """Creates the Compute Engine."""
 
+import vm-main-template
+import vm-selenium-template
+
 def GenerateConfig(context):
   """Creates the Compute Engine with network and firewall."""
+  
+  resources2 = [{
+    vm-main-template.GenerateConfig(context).resources
+  }, {
+    vm-selenium-template.GenerateConfig(context).resources
+  }]
 
   resources = [{
       'name': 'vm-main',
@@ -31,4 +40,4 @@ def GenerateConfig(context):
   #     'type': 'firewall-template.py'
   }]
   
-  return {'resources': resources}
+  return {'resources': resources2}
