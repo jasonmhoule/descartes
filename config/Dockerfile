@@ -13,4 +13,7 @@ RUN install2.r --error \
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
 ## COPY Rprofile.site /usr/local/lib/R/etc/Rprofile.site
-## [] This should be replaced using gsutil and service account
+## [] This should be replaced using gsutil and service account - perhaps w/ startup script on host VM
+## [] Notes in adopting this template:
+##    - Configure Dockerfile & GCP build trigger
+##    - Update rstudiocontainer.py (#11) accordingly
