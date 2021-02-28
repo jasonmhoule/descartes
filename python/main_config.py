@@ -20,9 +20,12 @@ import selenium_vm
 def GenerateConfig(context):
   """Creates the Compute Engine with network and firewall."""
   
+  mv = main_vm.GenerateConfig(context)
+  sv = selenium_vm.GenerateConfig(context)
+  
   resources2 = [
-    main_vm.GenerateConfig(context)['resources'],
-    selenium_vm.GenerateConfig(context)['resources']
+    mv['resources'],
+    sv['resources']
     ]
 
   # resources = [{
