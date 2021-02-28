@@ -23,7 +23,7 @@ def GenerateConfig(context):
   mv = main_vm.GenerateConfig(context)
   sv = selenium_vm.GenerateConfig(context)
   
-  resources2 = [
+  resources = [
     mv['resources'],
     sv['resources']
     ]
