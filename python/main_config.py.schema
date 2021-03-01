@@ -19,8 +19,7 @@ info:
 
 imports:
 - path: common.py
-- path: rstudiocontainer.py
-- path: seleniumcontainer.py
+- path: container_man.py
 - path: main_vm.py
 - path: selenium_vm.py
  
