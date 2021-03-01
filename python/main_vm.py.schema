@@ -19,7 +19,7 @@ info:
 
 imports:
 - path: common.py
-- path: rstudiocontainer.py
+- path: container_man.py
  
 required:
   - zone

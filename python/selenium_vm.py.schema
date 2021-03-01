@@ -19,13 +19,11 @@ info:
 
 imports:
 - path: common.py
-- path: seleniumcontainer.py
+- path: container_man.py
  
 required:
   - zone
   - machine
-  - user
-  - password
 
 properties:
   zone:
@@ -33,10 +31,4 @@ properties:
     type: string
   machine:
     description: Machine type for core Rstudio instance
-    type: string
-  user:
-    description: Rstudio username
-    type: string
-  password:
-    description: Rstudio password
     type: string

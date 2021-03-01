@@ -14,7 +14,7 @@
 
 """Creates a Container VM with the provided Container manifest."""
 
-import rstudiocontainer
+import container_man
 import common
 
 def GenerateConfig(context):
@@ -33,7 +33,7 @@ def GenerateConfig(context):
       'metadata': {
           'items': [{
               'key': 'gce-container-declaration',
-              'value': rstudiocontainer.manifest(context)
+              'value': container_man.rstudio(context)
               },{
               'key': 'google-logging-enabled',
               'value': 'true'
