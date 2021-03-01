@@ -30,10 +30,12 @@ def GenerateConfig(context):
 
   resources = [{
       'name': 'vm-main',
-      'type': 'main_vm.py'
+      'type': 'main_vm.py',
+      'properties': context.properties
   }, {
       'name': 'vm-selenium',
-      'type': 'selenium_vm.py'
+      'type': 'selenium_vm.py',
+      'properties': context.properties
   # }, {
   #     'name': 'network-1',
   #     'type': 'network-template.py'
