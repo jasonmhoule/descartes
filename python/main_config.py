@@ -31,7 +31,7 @@ def GenerateConfig(context):
   resources = [{
       'name': 'vm-main',
       'type': 'main_vm.py',
-      'properties': context.properties.update('test-value' = 'test')
+      'properties': context.properties.update({'test-value' : 'test'})
   }, {
       'name': 'vm-selenium',
       'type': 'selenium_vm.py',
