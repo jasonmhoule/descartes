@@ -14,29 +14,23 @@
 
 """Creates the Compute Engine."""
 
-# import main_vm
-# import selenium_vm
-
 def GenerateConfig(context):
   """Creates the Compute Engine with network and firewall."""
   
-  pp = context.properties
-  pp.update({"testfield": "$(ref.vm-selenium.selenium_ip)"})
+  context.properties.update({"selenium_ip": "$(ref.vm-selenium.selenium_ip)"})
 
   resources = [{
+    
       'name': 'vm-main',
       'type': 'main_vm.py',
-      'properties': pp
+      'properties': context.properties
+      
   }, {
+    
       'name': 'vm-selenium',
       'type': 'selenium_vm.py',
       'properties': context.properties
-  # }, {
-  #     'name': 'network-1',
-  #     'type': 'network-template.py'
-  # }, {
-  #     'name': 'firewall-1',
-  #     'type': 'firewall-template.py'
+      
   }]
   
   return {'resources': resources}
