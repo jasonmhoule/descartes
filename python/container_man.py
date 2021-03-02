@@ -17,6 +17,8 @@ def rstudio(context):
         value: {user}
       - name: ROOT
         value: true
+      - name: SELENIUM_IP
+        value: {selenium_ip}
       stdin: true
       tty: true
       ports:

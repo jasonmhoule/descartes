@@ -37,9 +37,6 @@ def GenerateConfig(context):
               },{
               'key': 'google-logging-enabled',
               'value': 'true'
-              },{
-              'key': 'test-value',
-              'value': context.properties['testfield']
           }]
       },
       'tags': {
