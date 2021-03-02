@@ -21,6 +21,7 @@ def GenerateConfig(context):
   """Creates the Compute Engine with network and firewall."""
   
   pp = context.properties
+  pp.update({"testfield": "$(ref.vm-selenium.selenium_ip)"})
 
   resources = [{
       'name': 'vm-main',
