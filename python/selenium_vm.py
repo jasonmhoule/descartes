@@ -84,9 +84,9 @@ def GenerateConfig(context):
   # return resources
   
   return {
-      'resources': res,
-      'outputs': [{
-          'name': 'selenium_ip',
-          'value': '$(ref.' + base_name + '.network[0].ip)'
-      }]
+      'resources': res
+      # 'outputs': [{
+      #     'name': 'selenium_ip',
+      #     'value': '$(ref.' + base_name + '.network[0].ip)'
+      # }]
   }

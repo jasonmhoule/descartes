@@ -33,7 +33,7 @@ properties:
     description: Machine type for core Rstudio instance
     type: string
     
-outputs:
-  selenium_ip:
-    description: Reference to ip address of Selenium VM
-    type: string
+# outputs:
+#   selenium_ip:
+#     description: Reference to ip address of Selenium VM
+#     type: string
