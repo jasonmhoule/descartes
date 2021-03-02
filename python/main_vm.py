@@ -37,9 +37,9 @@ def GenerateConfig(context):
               },{
               'key': 'google-logging-enabled',
               'value': 'true'
-              },{
-              'key': 'test-value',
-              'value': '$(ref.vm-selenium.selenium_ip)'
+              # },{
+              # 'key': 'test-value',
+              # 'value': '$(ref.vm-selenium.selenium_ip)'
           }]
       },
       'tags': {
