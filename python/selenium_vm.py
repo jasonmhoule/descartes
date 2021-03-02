@@ -51,15 +51,15 @@ def GenerateConfig(context):
                                               'family/cos-stable')
               },
       }],
-      # 'networkInterfaces': [{
-      #     'accessConfigs': [{
-      #         'name': 'external-nat',
-      #         'type': 'ONE_TO_ONE_NAT'
-      #         }],
-      #     'network': common.GlobalComputeUrl(context.env['project'],
-      #                                 'networks',
-      #                                 'default')
-      # }],
+      'networkInterfaces': [{
+          'accessConfigs': [{
+              'name': 'external-nat',
+              'type': 'ONE_TO_ONE_NAT'
+              }],
+          'network': common.GlobalComputeUrl(context.env['project'],
+                                      'networks',
+                                      'default')
+      }],
       'serviceAccounts': [{
           'email': 'default',
           'scopes': [
