@@ -15,6 +15,7 @@ RUN install2.r --error \
 ## clean up
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
+COPY fxns.R /home/fxns.R
 COPY start.sh tmp/start.sh
 RUN chmod +x tmp/start.sh
 
