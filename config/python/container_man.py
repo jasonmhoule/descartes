@@ -8,7 +8,7 @@ def rstudio(context):
   spec:
     containers:
     - name: rstudio-host
-      image: gcr.io/ml-learning-199501/github.com/jasonmhoule/ex1:latest
+      image: gcr.io/ml-learning-199501/github.com/jasonmhoule/descartes:latest
       imagePullPolicy: Always
       env:
       - name: PASSWORD
