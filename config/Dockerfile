@@ -1,11 +1,15 @@
 FROM rocker/verse
 MAINTAINER Jason Houle (jasonmhoule@gmail.com)
 
-RUN apt-get -qqy update && apt-get install -qqy \
+## Install packages including GCloud SDK
+RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | \
+        tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | \
+        apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - &&  apt-get -qqy update \
+        && apt-get install -qqy google-cloud-sdk \
         openssh-client \
         libxml2 \
         qpdf
-        
+
 ## Install packages from CRAN
 RUN install2.r --error \ 
     -r 'http://cran.rstudio.com' \
