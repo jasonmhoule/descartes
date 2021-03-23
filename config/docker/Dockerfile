@@ -30,8 +30,6 @@ RUN chmod +x tmp/start.sh
 
 CMD ["tmp/start.sh"]
 
-## COPY Rprofile.site /usr/local/lib/R/etc/Rprofile.site
-## [] This should be replaced using gsutil and service account - perhaps w/ startup script on host VM
 ## [] Notes in adopting this template:
 ##    - Configure Dockerfile & GCP build trigger
 ##    - Update rstudiocontainer.py (#11) accordingly
