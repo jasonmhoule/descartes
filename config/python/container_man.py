@@ -41,10 +41,17 @@ def selenium():
     - name: selenium
       image: docker.io/selenium/standalone-chrome:latest
       imagePullPolicy: Always
+      volumeMounts:
+      - mountPath: /dev/shm
+        name: volume-1
       ports:
       - containerPort: 4444
         hostPort: 4444
       restartPolicy: Always
+    volumes:
+    - name: volume-1
+      hostPath: 
+        path: /dev/shm
   """
   
   return MANIFEST
