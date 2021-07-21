@@ -4,6 +4,7 @@ MAINTAINER Jason Houle (jasonmhoule@gmail.com)
 ## Install packages including GCloud SDK
 RUN apt-get -qqy update && apt-get install -qqy \
         gnupg \
+        apt-transport-https \
         openssh-client \
         libxml2 \
         qpdf
